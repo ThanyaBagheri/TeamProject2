@@ -5,11 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.BrowserUtils;
 
-public class HomePage {
-    public HomePage(){
+public class LoginPage {
+    public LoginPage(){
         PageFactory.initElements(BrowserUtils.getDriver(),this);
     }
 
+    @FindBy(name = "email")
+    public WebElement userNameField;
 
+    @FindBy(name = "password")
+    public WebElement passwordField;
+
+    @FindBy(xpath = "//button")
+    public WebElement loginBtn;
 
 }
+
